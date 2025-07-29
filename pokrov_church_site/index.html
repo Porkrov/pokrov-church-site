@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8">
+  <title>Главная – Храм Покрова</title>
+  <script>
+    const userLang = navigator.language || navigator.userLanguage;
+    if (!location.pathname.includes('/en/') && !localStorage.getItem('langSet')) {
+      if (userLang.startsWith('en')) {
+        window.location.href = '/en/index.html';
+      }
+      localStorage.setItem('langSet', 'true');
+    }
+  </script>
+</head>
+<body>
+  <nav>
+    <ul style="list-style: none; display: flex; gap: 20px; padding: 0;">
+      <li><a href="/index.html">Главная</a></li>
+      <li><a href="/about.html">О Храме</a></li>
+      <li><a href="/project.html">О Проекте</a></li>
+      <li><a href="/donate.html">Пожертвовать</a></li>
+      <li><a href="/contact.html">Контакты</a></li>
+      <li><a href="/en/index.html">ENGLISH</a></li>
+    </ul>
+  </nav>
+  <h1>Добро пожаловать!</h1>
+  <p>С Божьей помощью мы строим православный храм в Австралии...</p>
+</body>
+</html>
